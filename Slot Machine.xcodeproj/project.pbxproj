@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,12 @@
 		5D70D8112646E8FE0023DD72 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70D8102646E8FE0023DD72 /* MenuViewController.swift */; };
 		5D8AFDCB2646FD2A0070D9E0 /* SlotMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8AFDCA2646FD2A0070D9E0 /* SlotMachineViewController.swift */; };
 		5D8AFDCE264702490070D9E0 /* SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8AFDCD264702490070D9E0 /* SlotMachine.swift */; };
+		5DBC277526481E220050B38E /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 5DBC277426481E220050B38E /* FacebookShare */; };
+		5DBC277726481E220050B38E /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5DBC277626481E220050B38E /* FacebookCore */; };
+		5DBC277926481E220050B38E /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = 5DBC277826481E220050B38E /* FacebookGamingServices */; };
+		5DBC277B26481E220050B38E /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5DBC277A26481E220050B38E /* FacebookLogin */; };
+		5DBC2780264825C00050B38E /* YandexMobileMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 5DBC277F264825C00050B38E /* YandexMobileMetricaCrashes */; };
+		5DBC2782264825C00050B38E /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; productRef = 5DBC2781264825C00050B38E /* YandexMobileMetrica */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DBC2780264825C00050B38E /* YandexMobileMetricaCrashes in Frameworks */,
+				5DBC277B26481E220050B38E /* FacebookLogin in Frameworks */,
+				5DBC277926481E220050B38E /* FacebookGamingServices in Frameworks */,
+				5DBC2782264825C00050B38E /* YandexMobileMetrica in Frameworks */,
+				5DBC277526481E220050B38E /* FacebookShare in Frameworks */,
+				5DBC277726481E220050B38E /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +82,7 @@
 		5D70D7F3264697CF0023DD72 /* Slot Machine */ = {
 			isa = PBXGroup;
 			children = (
+				5D70D802264697D00023DD72 /* Info.plist */,
 				5D70D7F4264697CF0023DD72 /* AppDelegate.swift */,
 				5D70D7F6264697CF0023DD72 /* SceneDelegate.swift */,
 				5D3A353B2647F17A00FD451E /* WebViewController.swift */,
@@ -83,7 +96,6 @@
 				5D70D7FA264697CF0023DD72 /* Main.storyboard */,
 				5D70D7FD264697D00023DD72 /* Assets.xcassets */,
 				5D70D7FF264697D00023DD72 /* LaunchScreen.storyboard */,
-				5D70D802264697D00023DD72 /* Info.plist */,
 			);
 			path = "Slot Machine";
 			sourceTree = "<group>";
@@ -104,6 +116,14 @@
 			dependencies = (
 			);
 			name = "Slot Machine";
+			packageProductDependencies = (
+				5DBC277426481E220050B38E /* FacebookShare */,
+				5DBC277626481E220050B38E /* FacebookCore */,
+				5DBC277826481E220050B38E /* FacebookGamingServices */,
+				5DBC277A26481E220050B38E /* FacebookLogin */,
+				5DBC277F264825C00050B38E /* YandexMobileMetricaCrashes */,
+				5DBC2781264825C00050B38E /* YandexMobileMetrica */,
+			);
 			productName = "Slot Machine";
 			productReference = 5D70D7F1264697CF0023DD72 /* Slot Machine.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +151,10 @@
 				Base,
 			);
 			mainGroup = 5D70D7E8264697CF0023DD72;
+			packageReferences = (
+				5DBC277326481E220050B38E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				5DBC277E264825C00050B38E /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */,
+			);
 			productRefGroup = 5D70D7F2264697CF0023DD72 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -371,6 +395,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DBC277326481E220050B38E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
+		5DBC277E264825C00050B38E /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yandexmobile/metrica-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.15.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DBC277426481E220050B38E /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DBC277326481E220050B38E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		5DBC277626481E220050B38E /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DBC277326481E220050B38E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		5DBC277826481E220050B38E /* FacebookGamingServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DBC277326481E220050B38E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookGamingServices;
+		};
+		5DBC277A26481E220050B38E /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DBC277326481E220050B38E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		5DBC277F264825C00050B38E /* YandexMobileMetricaCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DBC277E264825C00050B38E /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;
+			productName = YandexMobileMetricaCrashes;
+		};
+		5DBC2781264825C00050B38E /* YandexMobileMetrica */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DBC277E264825C00050B38E /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;
+			productName = YandexMobileMetrica;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D70D7E9264697CF0023DD72 /* Project object */;
 }
