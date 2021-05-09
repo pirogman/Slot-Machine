@@ -45,39 +45,39 @@ struct SlotsManager {
             bananas, bananas, straw, straw, straw
         ]
         var cases = [
-            WinCase(requiredSlot: salad, times: 4, rate: 72),
+            WinCase(requiredSlot: salad, times: 4, rate: 36),
             
-            WinCase(requiredSlot: apple, times: 4, rate: 36),
-            WinCase(requiredSlot: cherry, times: 4, rate: 36),
-            WinCase(requiredSlot: bananas, times: 4, rate: 36),
+            WinCase(requiredSlot: apple, times: 4, rate: 18),
+            WinCase(requiredSlot: cherry, times: 4, rate: 18),
+            WinCase(requiredSlot: bananas, times: 4, rate: 18),
             
-            WinCase(requiredSlot: peach, times: 4, rate: 24),
-            WinCase(requiredSlot: pear, times: 4, rate: 24),
-            WinCase(requiredSlot: straw, times: 4, rate: 24),
+            WinCase(requiredSlot: peach, times: 4, rate: 12),
+            WinCase(requiredSlot: pear, times: 4, rate: 12),
+            WinCase(requiredSlot: straw, times: 4, rate: 12),
             
-            WinCase(requiredSlot: apple, times: 3, rate: 18),
-            WinCase(requiredSlot: cherry, times: 3, rate: 18),
-            WinCase(requiredSlot: bananas, times: 3, rate: 18),
+            WinCase(requiredSlot: apple, times: 3, rate: 9),
+            WinCase(requiredSlot: cherry, times: 3, rate: 9),
+            WinCase(requiredSlot: bananas, times: 3, rate: 9),
             
-            WinCase(requiredSlot: peach, times: 3, rate: 12),
-            WinCase(requiredSlot: pear, times: 3, rate: 12),
-            WinCase(requiredSlot: straw, times: 3, rate: 12),
+            WinCase(requiredSlot: peach, times: 3, rate: 6),
+            WinCase(requiredSlot: pear, times: 3, rate: 6),
+            WinCase(requiredSlot: straw, times: 3, rate: 6),
             
-            WinCase(requiredSlots: [apple, apple, peach, peach], rate: 30),
-            WinCase(requiredSlots: [apple, apple, pear, pear], rate: 30),
-            WinCase(requiredSlots: [apple, apple, straw, straw], rate: 30),
+            WinCase(requiredSlots: [apple, apple, peach, peach], rate: 15),
+            WinCase(requiredSlots: [apple, apple, pear, pear], rate: 15),
+            WinCase(requiredSlots: [apple, apple, straw, straw], rate: 15),
             
-            WinCase(requiredSlots: [cherry, cherry, peach, peach], rate: 30),
-            WinCase(requiredSlots: [cherry, cherry, pear, pear], rate: 30),
-            WinCase(requiredSlots: [cherry, cherry, straw, straw], rate: 30),
+            WinCase(requiredSlots: [cherry, cherry, peach, peach], rate: 15),
+            WinCase(requiredSlots: [cherry, cherry, pear, pear], rate: 15),
+            WinCase(requiredSlots: [cherry, cherry, straw, straw], rate: 15),
             
-            WinCase(requiredSlots: [bananas, bananas, peach, peach], rate: 30),
-            WinCase(requiredSlots: [bananas, bananas, pear, pear], rate: 30),
-            WinCase(requiredSlots: [bananas, bananas, straw, straw], rate: 30),
+            WinCase(requiredSlots: [bananas, bananas, peach, peach], rate: 15),
+            WinCase(requiredSlots: [bananas, bananas, pear, pear], rate: 15),
+            WinCase(requiredSlots: [bananas, bananas, straw, straw], rate: 15),
             
-            WinCase(requiredSlots: [peach, peach, pear, pear], rate: 18),
-            WinCase(requiredSlots: [straw, straw, pear, pear], rate: 18),
-            WinCase(requiredSlots: [peach, peach, straw, straw], rate: 18)
+            WinCase(requiredSlots: [peach, peach, pear, pear], rate: 9),
+            WinCase(requiredSlots: [straw, straw, pear, pear], rate: 9),
+            WinCase(requiredSlots: [peach, peach, straw, straw], rate: 9)
         ]
         for i in 1..<cases.count {
             cases[i].jokerValue = salad.slotValue
