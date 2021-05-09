@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D1C4AF2264725C7007488D5 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C4AF1264725C7007488D5 /* Extentions.swift */; };
+		5D3A35332647DFDA00FD451E /* SlotsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3A35322647DFDA00FD451E /* SlotsManager.swift */; };
+		5D3A35362647E74900FD451E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3A35352647E74900FD451E /* Currency.swift */; };
+		5D3A35392647E7E500FD451E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3A35382647E7E500FD451E /* Storage.swift */; };
+		5D3A353C2647F17A00FD451E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3A353B2647F17A00FD451E /* WebViewController.swift */; };
 		5D70D7F5264697CF0023DD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70D7F4264697CF0023DD72 /* AppDelegate.swift */; };
 		5D70D7F7264697CF0023DD72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70D7F6264697CF0023DD72 /* SceneDelegate.swift */; };
-		5D70D7F9264697CF0023DD72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70D7F8264697CF0023DD72 /* ViewController.swift */; };
 		5D70D7FC264697CF0023DD72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D70D7FA264697CF0023DD72 /* Main.storyboard */; };
 		5D70D7FE264697D00023DD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D70D7FD264697D00023DD72 /* Assets.xcassets */; };
 		5D70D801264697D00023DD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D70D7FF264697D00023DD72 /* LaunchScreen.storyboard */; };
+		5D70D8112646E8FE0023DD72 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70D8102646E8FE0023DD72 /* MenuViewController.swift */; };
+		5D8AFDCB2646FD2A0070D9E0 /* SlotMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8AFDCA2646FD2A0070D9E0 /* SlotMachineViewController.swift */; };
+		5D8AFDCE264702490070D9E0 /* SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8AFDCD264702490070D9E0 /* SlotMachine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D1C4AF1264725C7007488D5 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		5D3A35322647DFDA00FD451E /* SlotsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsManager.swift; sourceTree = "<group>"; };
+		5D3A35352647E74900FD451E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		5D3A35382647E7E500FD451E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		5D3A353B2647F17A00FD451E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5D70D7F1264697CF0023DD72 /* Slot Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slot Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D70D7F4264697CF0023DD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D70D7F6264697CF0023DD72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D70D7F8264697CF0023DD72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D70D7FB264697CF0023DD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D70D7FD264697D00023DD72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D70D800264697D00023DD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D70D802264697D00023DD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D70D8102646E8FE0023DD72 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5D8AFDCA2646FD2A0070D9E0 /* SlotMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineViewController.swift; sourceTree = "<group>"; };
+		5D8AFDCD264702490070D9E0 /* SlotMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +72,14 @@
 			children = (
 				5D70D7F4264697CF0023DD72 /* AppDelegate.swift */,
 				5D70D7F6264697CF0023DD72 /* SceneDelegate.swift */,
-				5D70D7F8264697CF0023DD72 /* ViewController.swift */,
+				5D3A353B2647F17A00FD451E /* WebViewController.swift */,
+				5D70D8102646E8FE0023DD72 /* MenuViewController.swift */,
+				5D8AFDCA2646FD2A0070D9E0 /* SlotMachineViewController.swift */,
+				5D8AFDCD264702490070D9E0 /* SlotMachine.swift */,
+				5D3A35322647DFDA00FD451E /* SlotsManager.swift */,
+				5D3A35352647E74900FD451E /* Currency.swift */,
+				5D3A35382647E7E500FD451E /* Storage.swift */,
+				5D1C4AF1264725C7007488D5 /* Extentions.swift */,
 				5D70D7FA264697CF0023DD72 /* Main.storyboard */,
 				5D70D7FD264697D00023DD72 /* Assets.xcassets */,
 				5D70D7FF264697D00023DD72 /* LaunchScreen.storyboard */,
@@ -137,9 +158,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D70D7F9264697CF0023DD72 /* ViewController.swift in Sources */,
+				5D70D8112646E8FE0023DD72 /* MenuViewController.swift in Sources */,
+				5D3A35332647DFDA00FD451E /* SlotsManager.swift in Sources */,
 				5D70D7F5264697CF0023DD72 /* AppDelegate.swift in Sources */,
+				5D3A353C2647F17A00FD451E /* WebViewController.swift in Sources */,
+				5D1C4AF2264725C7007488D5 /* Extentions.swift in Sources */,
+				5D3A35362647E74900FD451E /* Currency.swift in Sources */,
+				5D3A35392647E7E500FD451E /* Storage.swift in Sources */,
 				5D70D7F7264697CF0023DD72 /* SceneDelegate.swift in Sources */,
+				5D8AFDCB2646FD2A0070D9E0 /* SlotMachineViewController.swift in Sources */,
+				5D8AFDCE264702490070D9E0 /* SlotMachine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3G24782ZXQ;
 				INFOPLIST_FILE = "Slot Machine/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pirogman.Slot-Machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3G24782ZXQ;
 				INFOPLIST_FILE = "Slot Machine/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pirogman.Slot-Machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
