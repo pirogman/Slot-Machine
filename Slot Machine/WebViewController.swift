@@ -30,13 +30,8 @@ class WebViewController: UIViewController {
 }
 
 extension WebViewController: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        guard let url = webView.url?.absoluteString else { return }
-        print("> Started url: \(url)")
-    }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         guard let url = webView.url?.absoluteString else { return }
-        print("> Finished url: \(url)")
         if url.contains("google") {
             performSegue(withIdentifier: "toGames", sender: nil)
         } else {

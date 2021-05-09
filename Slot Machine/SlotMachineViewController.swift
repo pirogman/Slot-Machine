@@ -120,6 +120,7 @@ class SlotMachineViewController: UIViewController {
         currentBet = max(Storage.shared.lastBet[currency]!, machine.betStep)
         playerBank = Storage.shared.userBank[currency]!
         resultLabel.text = " "
+        gameTitleLabel.text = machine.machineName.uppercased()
     }
     
     private func setupColors() {
@@ -193,7 +194,7 @@ class SlotMachineViewController: UIViewController {
         for i in 0..<slotPicker.numberOfComponents {
             let index = indexes[i]
             let reverseIndex = machine.slots.count - index - 1
-            let moved = slotPicker.numberOfRows(inComponent: i) - reverseIndex - 1
+            let moved = slotPicker.numberOfRows(inComponent: i) - reverseIndex - 1 - machine.slots.count
             slotPicker.selectRow(moved, inComponent: i, animated: false)
         }
     }
@@ -236,7 +237,7 @@ extension SlotMachineViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return machine.slots.count * 5
+        return machine.slots.count * 7
     }
     
 }

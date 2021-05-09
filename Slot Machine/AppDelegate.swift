@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 import FBSDKCoreKit
 import YandexMobileMetrica
 
@@ -17,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = YMMYandexMetricaConfiguration.init(apiKey: "ea4fabc9-0b26-4933-bd63-4b3480a50a51")
         configuration?.logs = true
         YMMYandexMetrica.activate(with: configuration!)
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) {
+            [unowned self] granted, error in
+            if granted {
+                scheduleNotification()
+            }
+        }
+        center.delegate = self
         return true
     }
     
@@ -38,5 +47,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    // MARK: - Notifications
+        
+    func scheduleNotification() {
+        let currency: Currency = Bool.random() ? .stars : .gems
+        let amount = [50, 50, 50, 100, 100, 300].randomElement()!
+        let center = UNUserNotificationCenter.current()
+        let content = UNMutableNotificationContent()
+        content.title = "Special Offer"
+        content.body = "Don't miss our exclusive today's deal and get \(amount) \(currency.rawValue) for free! Harry up!"
+        content.categoryIdentifier = "offer"
+        content.userInfo = [
+            "currency": currency.rawValue,
+            "amount": amount,
+            "scheduledDate": Date(),
+            "availability": TimeInterval.hour
+        ]
+        content.sound = UNNotificationSound.default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: .minute, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+    }
+    
 }
 
+// MARK: - UNUserNotificationCenterDelegate
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userData = response.notification.request.content.userInfo
+        if let raw = userData["currency"] as? String,
+           let currency = Currency(rawValue: raw),
+           let amount = userData["amount"] as? Int,
+           let scheduledDate = userData["scheduledDate"] as? Date,
+           let availability = userData["availability"] as? TimeInterval {
+            if scheduledDate.distance(to: Date()) < availability {
+                Storage.shared.userBank[currency]! += amount
+                print(" >> Got \(amount)\(raw) for free!")
+            } else {
+                print(" >> Missed \(amount)\(raw) offer...")
+            }
+        }
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print(" >> Notification arrived when in game!")
+        completionHandler([.alert, .badge, .sound])
+    }
+    
+}
